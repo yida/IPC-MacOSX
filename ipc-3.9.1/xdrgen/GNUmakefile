@@ -56,8 +56,7 @@
 # Module configuration.
 #############################################################################
 
-INSTALL_DIR	= ..
-BASE_DIR	:= $(shell cd $(INSTALL_DIR);/bin/pwd)
+BASE_DIR	:= $(shell /bin/pwd)/..
 MODULE_DIR	= xdrgen
 PROJECT		= ipc
 MODULE		= xdrgen

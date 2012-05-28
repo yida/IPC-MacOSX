@@ -133,7 +133,7 @@
 #############################################################################
 
 PROJECT		= ipc
-FTP_DIR		= $(INSTALL_DIR)/ftp
+FTP_DIR		= $(BASE_DIR)/ftp
 DBMALLOC_DIR	= /afs/cs/project/robocomp/xavier
 
 #############################################################################
@@ -195,7 +195,7 @@ THIS_OS_BOTH := $(THIS_OS)-$(THIS_RELEASE)
 # Release configuration.
 #############################################################################
 
-VERSION_DEF = $(INSTALL_DIR)/src/ipcPriv.h
+VERSION_DEF = $(BASE_DIR)/src/ipcPriv.h
 IPC_VERSION_MAJOR := $(shell awk '/VERSION_MAJOR/ {print $$3}' $(VERSION_DEF) )
 IPC_VERSION_MINOR := $(shell awk '/VERSION_MINOR/ {print $$3}' $(VERSION_DEF) )
 IPC_VERSION_MICRO := $(shell awk '/VERSION_MICRO/ {print $$3}' $(VERSION_DEF) )
@@ -226,7 +226,7 @@ PWD 	:= $(shell /bin/pwd)
 #############################################################################
 # Standard directories
 #############################################################################
-
+INSTALL_DIR       = $(shell /bin/pwd)/..
 PUBLIC_BIN_DIR		= $(INSTALL_DIR)/bin/$(THIS_OS_BOTH)
 PUBLIC_INC_DIR 		= $(INSTALL_DIR)/include
 PUBLIC_LIB_DIR		= $(INSTALL_DIR)/lib/$(THIS_OS_BOTH)
@@ -304,7 +304,7 @@ CC		= CC -n32
 CCC		= CC -n32
 endif
 
-MKDIR           = mkdir -p
+MKDIR = mkdir -p
 
 #############################################################################
 # Program Configuration Macros

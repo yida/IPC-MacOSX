@@ -40,9 +40,8 @@
 # Module Configuration Macros
 #############################################################################
 
-INSTALL_DIR	= ..
 ifndef BASE_DIR
-BASE_DIR	:= $(shell cd $(INSTALL_DIR);/bin/pwd)
+BASE_DIR	:= $(shell /bin/pwd)/..
 endif
 MODULE_DIR	= etc
 PROJECT		= ipc

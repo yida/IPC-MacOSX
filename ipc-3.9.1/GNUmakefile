@@ -51,7 +51,6 @@
 #
 #############################################################################
 
-INSTALL_DIR	= .
 ifndef BASE_DIR
 BASE_DIR	:= $(shell /bin/pwd)
 endif

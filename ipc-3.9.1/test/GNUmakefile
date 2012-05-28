@@ -68,8 +68,7 @@
 # Module configuration.
 #############################################################################
 
-INSTALL_DIR	= ..
-BASE_DIR	:= $(shell cd $(INSTALL_DIR);/bin/pwd)
+BASE_DIR	:= $(shell /bin/pwd)
 MODULE_DIR	= test
 PROJECT		= ipc
 MODULE		= test
@@ -84,8 +83,8 @@ VERSION_PREFIX	=
 #############################################################################
 
 PWD 	:= $(shell /bin/pwd)
-STD_FILE := $(shell ls $(INSTALL_DIR)/etc/GNUmakefile.std 2>/dev/null | grep -v "not found" | head -1)
-DEFS_FILE := $(shell ls $(INSTALL_DIR)/etc/GNUmakefile.defs 2>/dev/null | grep -v "not found" | head -1)
+STD_FILE := $(shell ls $(BASE_DIR)/etc/GNUmakefile.std 2>/dev/null | grep -v "not found" | head -1)
+DEFS_FILE := $(shell ls $(BASE_DIR)/etc/GNUmakefile.defs 2>/dev/null | grep -v "not found" | head -1)
 
 ##########
 # Include standard definitions
