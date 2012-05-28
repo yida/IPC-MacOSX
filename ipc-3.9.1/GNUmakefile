@@ -58,7 +58,7 @@ endif
 MODULE_DIR	= 
 PROJECT		= ipc
 MODULE		= 
-SUBDIRS		= etc src lisp java python test doc xdrgen
+SUBDIRS		= etc src java python test doc xdrgen
 
 #############################################################################
 # Where are the standard files?
@@ -132,6 +132,15 @@ MISC		=  GNUmakefile README README.MAC LICENSE.TXT
 default: install
 
 all:: srcs libs bins privs
+PREFIX := /Users/Yida/ipc
+
+install_brew: default
+	mkdir -p $(PREFIX)/bin
+	cp -rf bin/$(THIS_OS_BOTH)/* $(PREFIX)/bin
+	mkdir -p $(PREFIX)/lib
+	cp -rf lib/$(THIS_OS_BOTH)/* $(PREFIX)/lib
+
+
 
 ##########
 # User Defined Targets
