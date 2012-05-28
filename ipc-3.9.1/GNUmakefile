@@ -136,9 +136,9 @@ PREFIX := /Users/Yida/ipc
 
 install_brew: default
 	mkdir -p $(PREFIX)/bin
-	cp -rf bin/$(THIS_OS_BOTH)/* $(PREFIX)/bin
+	cp -rf $(BASE_DIR)/bin/$(THIS_OS_BOTH)/* $(PREFIX)/bin
 	mkdir -p $(PREFIX)/lib
-	cp -rf lib/$(THIS_OS_BOTH)/* $(PREFIX)/lib
+	cp -rf $(BASE_DIR)/lib/$(THIS_OS_BOTH)/* $(PREFIX)/lib
 
 
 
