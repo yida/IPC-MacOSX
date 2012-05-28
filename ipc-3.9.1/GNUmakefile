@@ -132,7 +132,7 @@ MISC		=  GNUmakefile README README.MAC LICENSE.TXT
 default: install
 
 all:: srcs libs bins privs
-PREFIX := /Users/Yida/ipc
+PREFIX = 
 
 install_brew: default
 	mkdir -p $(PREFIX)/bin
